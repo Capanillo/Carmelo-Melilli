@@ -63,7 +63,8 @@ form {
     flex-direction: column;
 }
 
-input {
+input,
+textarea {
     position: relative;
     width: 100%;
     outline: none;
@@ -78,8 +79,34 @@ input {
 }
 
 input:focus,
-input:valid {
+input:valid,
+textarea:focus,
+textarea:valid {
     border-color: #FFF;
+}
+
+textarea {
+    height: 250px;
+    resize: none;
+}
+
+.textarea {
+    position: relative;
+    width: 100%;
+}
+
+.textarea label {
+    top: 1rem;
+}
+
+textarea:focus+label,
+textarea:valid+label {
+    top: 0;
+    font-size: 0.875rem;
+    left: 1rem;
+    color: #FFF;
+    background-color: #000;
+    padding-inline: 0.25rem;
 }
 
 
